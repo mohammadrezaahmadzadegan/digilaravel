@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    echo 'this laravel 6';
-});
+Route::get('/','HomeController@index');
