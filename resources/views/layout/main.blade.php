@@ -7,8 +7,8 @@
     <title>Digilaravel|@section('title') onlineshop @show</title>
 </head>
 <body>
-@includeIf('layout.header')
+@includeIf('parts.header')
     @yield('content')
-    @includeWhen(empty($footer),'layout.footer' )
+    @includeWhen(empty($footer),'parts.footer' )
 </body>
 </html>

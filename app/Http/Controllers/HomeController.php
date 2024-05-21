@@ -12,7 +12,7 @@ class HomeController extends Controller
    }
 
    public function login(){
-    return view('login');
+    return view('login',['oneten'=>[1,2,3,4],'day'=>6]);
    }
    public function form(){
     return view('form',['array'=>request()->all()]);
