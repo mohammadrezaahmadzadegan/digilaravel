@@ -1,5 +1,6 @@
 <?php
-
+echo 'this is index page in public';
+echo '<br>';
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

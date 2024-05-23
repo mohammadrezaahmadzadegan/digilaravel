@@ -58,7 +58,24 @@
 @echotext($ra = 44; echo $ra)
 
 @endsection
+<br>
 @php
-    $footer = 1;
+
+// $x = 1;
+// $z = function() use ($x){
+//     echo $x;
+// };
+// $z(); //output: 1
+
+function nextFunction($request) {
+    // Simulating what the middleware would do
+    return "Processed by the next function with request: $request";
+}
+
+// Example of calling the nextFunction
+$requestData = "Some data to process";
+$result = nextFunction($requestData);
+echo $result;
+
 @endphp
 
