@@ -10,6 +10,7 @@ class UserController extends Controller
     function __construct()
     {
         $this->middleware('newmy')->only('create');
+       // $this->middleware('newmy')->except(['index','create']);
     }
     /**
      * Display a listing of the resource.

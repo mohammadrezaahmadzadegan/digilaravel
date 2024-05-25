@@ -1,7 +1,8 @@
 <?php
-
+echo 'this is api.php page in routes';
+echo '<br>';
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | API Routes

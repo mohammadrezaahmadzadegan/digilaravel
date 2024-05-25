@@ -1,5 +1,6 @@
 <?php
-
+echo 'this is app page in bootstrap';
+echo '<br>';
 /*
 |--------------------------------------------------------------------------
 | Create The Application

@@ -56,8 +56,6 @@
 @bold(hello)
 <br>
 @echotext($ra = 44; echo $ra)
-
-@endsection
 <br>
 @php
 
@@ -67,15 +65,34 @@
 // };
 // $z(); //output: 1
 
-function nextFunction($request) {
-    // Simulating what the middleware would do
-    return "Processed by the next function with request: $request";
+class login {
+    function index()
+    {
+        return 3;
+    }
 }
+$result = new login;
+function fdnew(login $test){
+   echo $test->index();
+}
+fdnew($result);
 
-// Example of calling the nextFunction
-$requestData = "Some data to process";
-$result = nextFunction($requestData);
-echo $result;
+
+function fdnew1(closure $test){
+   echo $test();
+}
+fdnew1(function(){
+    echo 4;
+});
+
+echo '<br>';
+$t =3;
+$f= 4;
+$g=5;
+echo "$t <br> $f <br> $g";
+echo '<br>';
+
+
 
 @endphp
-
+@endsection

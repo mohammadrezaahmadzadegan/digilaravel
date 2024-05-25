@@ -42,6 +42,12 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
+        'CheckUsers' => [
+            'CheckUser3' => \App\Http\Middleware\CheckUser3::class,
+            'CheckUser4' => \App\Http\Middleware\CheckUser4::class
+
+        ]
     ];
 
     /**
@@ -62,7 +68,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'newmy' => \App\Http\Middleware\CheckUser::class
+        'newmy' => \App\Http\Middleware\CheckUser::class,
+        'CheckUser2' => \App\Http\Middleware\CheckUser2::class
     ];
 
     /**

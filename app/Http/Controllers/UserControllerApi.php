@@ -13,7 +13,7 @@ class UserControllerApi extends Controller
      */
     public function index()
     {
-
+echo 'this is UserControllerApi method index';
     }
 
     /**
