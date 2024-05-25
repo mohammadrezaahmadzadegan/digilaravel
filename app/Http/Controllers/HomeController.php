@@ -2,13 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request as FacadesRequest;
+
 class HomeController extends Controller
 {
+    public $globali;
+    public function __construct(Request $request)
+    {
+       $this->globali = $request->all();
+    }
    public function index(){
-    return view('index');
+    // $result = app(Request::class);
+    // dd($result->all());
+    //dd(request()->all());
+    // echo $id;
+    // var_dump($request->all());
+    // $hh->va();
+    var_dump($this->globali);
    }
    public function welcome(){
-    return view('welcome');
+    //return view('welcome');
+    var_dump($this->globali);
    }
 
    public function login(){
@@ -18,3 +33,11 @@ class HomeController extends Controller
     return view('form',['array'=>request()->all()]);
    }
 }
+// class newfor{
+//     public $name;
+//     function va()
+//     {
+//         echo $this->name = 'asad';
+
+//     }
+// }

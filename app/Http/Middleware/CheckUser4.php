@@ -15,6 +15,7 @@ class CheckUser4
      */
     public function handle($request, Closure $next)
     {
+        echo 'this is middleware CheckUser4';
         return $next($request);
     }
 }

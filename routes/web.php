@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@index')->name('homepage');
 
-Route::get('/welcome','HomeController@welcome')->name('welcome')->middleware('CheckUsers');
+Route::get('/welcome',['uses'=>'HomeController@welcome','as'=>'login','middleware'=>['CheckUser6:3']]);
 
 Route::get('/login',['uses'=>'HomeController@login','as'=>'login','middleware'=>['newmy']]);
 
@@ -26,9 +26,7 @@ Route::get('/signup','HomeController@login')->middleware(['newmy']);
 
 Route::get('/my/{id?}','mycontroller');
 
-Route::view('/best', function(){
-    echo 'this is view';
-});
+Route::view('/best','index')->middleware(['CheckUser6:1']);
 
 Route::post('/form','HomeController@form');
 
