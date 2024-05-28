@@ -1,5 +1,10 @@
 @extends('layout.main')
 @section('content')
-<h1>this is home page</h1>
+<form action="/welcome" method="POST" enctype="multipart/form-data">
+@csrf
+<input type="file"  name="name[]" multiple>
+
+<button>send</button>
+</form>
 @endsection
 @section('title','home')
